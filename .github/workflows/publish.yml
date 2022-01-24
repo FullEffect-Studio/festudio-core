@@ -1,4 +1,5 @@
 name: Merge on master
+
 on:
   pull_request:
     branches:
