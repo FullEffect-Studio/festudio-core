@@ -1,0 +1,34 @@
+{
+  "root": "packages/serial-pin-generator",
+  "sourceRoot": "packages/serial-pin-generator/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/serial-pin-generator/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/serial-pin-generator"],
+      "options": {
+        "jestConfig": "packages/serial-pin-generator/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/serial-pin-generator",
+        "tsConfig": "packages/serial-pin-generator/tsconfig.lib.json",
+        "packageJson": "packages/serial-pin-generator/package.json",
+        "main": "packages/serial-pin-generator/src/index.ts",
+        "assets": ["packages/serial-pin-generator/*.md"]
+      }
+    }
+  },
+  "tags": []
+}
