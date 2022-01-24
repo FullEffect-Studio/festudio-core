@@ -15,27 +15,27 @@ jobs:
       matrix:
         # Latest nodes only
         node-version: [ 13.x ]
-# Define Steps
-steps:
-  # Checkout code
-  - uses: actions/checkout@v2
-    with:
-      ref: ${{ github.event.pull_request.head.ref }}
-      fetch-depth: 0
+    # Define Steps
+    steps:
+      # Checkout code
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
 
-  - name: Use Node.js ${{ matrix.node-version }}
-    uses: actions/setup-node@v1
-    with:
-      node-version: ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
 
-  # Make sure we have all branches
-  - name: Fetch other branches
-    run: git fetch --no-tags --prune --depth=5 origin master
-  - name: Install environment
-    run: npm ci
+      # Make sure we have all branches
+      - name: Fetch other branches
+        run: git fetch --no-tags --prune --depth=5 origin master
+      - name: Install environment
+        run: npm ci
 
-  - name: Run lint
-    run: npm run affected:lint -- --base="origin/master"
+      - name: Run lint
+        run: npm run affected:lint -- --base="origin/master"
 
-  - name: Tests coverage
-    run: npm run affected:test -- --base="origin/master" --codeCoverage
+      - name: Tests coverage
+        run: npm run affected:test -- --base="origin/master" --codeCoverage
