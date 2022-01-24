@@ -1,0 +1,28 @@
+name: Merge on master
+on:
+  pull_request:
+    branches:
+      - master
+    types: [ closed ]
+jobs:
+  build:
+    # Setup OS and Node Version
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # Latest nodes only
+        node-version: [ 13.x ]
+steps:
+  # Checkout code
+  - name: Checkout Code
+    if: github.event.pull_request.merged == true && contains(github.event.commits[0].message, '[skip-ci]') == false
+    uses: actions/checkout@v2
+
+
+  - name: Deploy
+      if: github.event.pull_request.merged == true && contains(github.event.commits[0].message, '[skip-ci]') == false
+      env:
+        NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      run: |
+        npm config set //registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN
+        ./.github/scripts/publish-libraries.sh
