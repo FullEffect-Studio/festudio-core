@@ -1,14 +1,13 @@
 {
   "name": "@festudio/core",
   "author": "Danquah Bernard White <danquahwhite@gmail.com>",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "scripts": {
     "build:serial-pin-generator": "nx build serial-pin-generator",
     "prebuild": "del-cli --force ../dist",
     "build": "npm run build:serial-pin-generator",
-    "publish:serial-pin-generator":"cd dist/packages/serial-pin-generator && npm publish --access=public"
-
+    "publish:serial-pin-generator": "cd dist/packages/serial-pin-generator && npm publish --access=public"
   },
   "dependencies": {
     "tslib": "^2.0.0"
