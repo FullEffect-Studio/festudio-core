@@ -1,4 +1,4 @@
-# Serial-PIN-Generator 🔐🔓#️⃣#️⃣#️⃣#️⃣#️⃣🔑🔒
+# Serial-PIN-Generator 🔐🔓#️⃣#️⃣#️⃣#️⃣🔑🔒
 This library helps you generate unique pairs of serial and pin numbers everytime.
 
 
