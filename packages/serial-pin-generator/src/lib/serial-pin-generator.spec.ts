@@ -1,4 +1,5 @@
-import {createCardPins} from "@festudio/core";
+import { createCardPins } from "./create-serial-pin";
+
 
 describe('serialPinGenerator',  () => {
   it('should generate  a serial and pin', async() => {
