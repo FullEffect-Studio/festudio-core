@@ -10,4 +10,4 @@ import { FeMessagesService } from "./messages/fe-messages.service";
   providers: [FeMessagesService],
   exports: [MessagesComponent]
 })
-export class MessagesModule {}
+export class FeMessagesModule {}
