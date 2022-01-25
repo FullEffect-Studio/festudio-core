@@ -1,6 +1,6 @@
 <div class='mb-4'>
   <div *ngIf="errors$|async as errors">
-    <nz-alert *ngIf="errors" [nzCloseable]="closeable" (nzOnClose)="close()"
+    <nz-alert *ngIf="!errors" [nzCloseable]="closeable" (nzOnClose)="close()"
               nzType="error" [nzShowIcon]="true" [nzMessage]="title"
               [nzDescription]="description">
       <ng-template #description>
