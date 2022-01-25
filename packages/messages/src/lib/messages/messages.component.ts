@@ -8,7 +8,7 @@ import { FeMessagesService } from "./fe-messages.service";
   styleUrls: ['./messages.component.scss']
 })
 export class MessagesComponent implements OnInit {
-  errors$: Observable<string[]> =  this.feMessagesService.errors$
+  errors$ =  this.feMessagesService.errors$
   @Input() closeable= true
   @Input() title = 'Some errors occurred: ';
 
