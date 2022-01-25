@@ -26,7 +26,7 @@ const defaultOptions = {
 }
 
 export interface SerialPinPair{
-  pin: number, serial_num: number
+  pin: number, serial_num: string
 }
 
 /**
@@ -57,7 +57,7 @@ export function createCardPins(options = defaultOptions): Promise<SerialPinPair[
     }
     const cards = generateValues(pinLength, serialNumLength, prefixCharacters, numberRequired);
     let card;
-    let cardArray: SerialPinPair[] = [];
+    const cardArray: SerialPinPair[] = [];
     do{
       card = cards.next();
       if(card.value !== undefined)

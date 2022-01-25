@@ -54,3 +54,35 @@ pins [
 ```
 
 
+## Customize generation
+```createCardPins()``` method takes an optional ```options``` argument
+
+This is the default options interface
+```
+const defaultOptions = {
+  pinLength: 12, 
+  serialNumLength: 15,
+  prefixCharacters: '',
+  numberRequired: 20
+}
+
+```
+
+So you can do something like this
+
+```
+const serialPinPairs = await createCardPins({
+  pinLength: 10,
+  serialNumLength: 16
+  prefixCharacters: 'GH',
+  numberRequired: 1
+})
+
+console.log(serialPinPairs)
+
+[
+   { pin: 1501856528, serial_num: 'GH7596177621600189' },
+]
+```
+
+<b> Note that the ```createCardPins()``` method is always returns an ```array``` of ```SerialPinPair``` interface</b>
