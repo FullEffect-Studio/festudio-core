@@ -1,5 +1,18 @@
 {
   "name": "@festudio/serial-pin-generator",
-  "version": "1.0.3",
+  "version": "1.0.4",
+  "description": "This library helps you generate unique pairs of serial and pin numbers everytime",
+  "keywords": [
+    "serial",
+    "pin",
+    "generator",
+    "festudio",
+    "danqulogy",
+    "ghana",
+    "accra",
+    "fulleffect"
+  ],
+  "author": "Danquah Bernard White",
+  "license": "MIT",
   "private": false
 }
