@@ -1,7 +1,7 @@
 {
   "name": "@festudio/ngx-messages",
   "description": "Easily show feedback messages and clear them in a service oriented manner",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "keywords": [
     "ngx",
     "messages",
