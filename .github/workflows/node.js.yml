@@ -1,4 +1,4 @@
-name: Packages Build CI
+name: FeStudion Core Packages
 on:
   push:
     branches: [ master ]
