@@ -49,4 +49,4 @@ if [ "$AFFECTED" != "" ]; then
   done <<<"$AFFECTED " # leave space on end to generate correct output
 else
   echo "No Libraries to publish"
-fi
+
