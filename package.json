@@ -8,6 +8,7 @@
     "version:messages": "cd packages/messages && npm version patch",
     "publish:messages": "cd dist/packages/messages && npm publish --access=public",
     "release:messages": "npm run version:messages && npm run build:messages && npm run publish:messages",
+
     "build:serial-pin": "nx build serial-pin-generator",
     "version:serial-pin": "cd packages/serial-pin-generator && npm version patch",
     "publish:serial-pin": "cd dist/packages/serial-pin-generator && npm publish --access=public",

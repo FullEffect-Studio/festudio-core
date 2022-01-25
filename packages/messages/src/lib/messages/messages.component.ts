@@ -10,7 +10,7 @@ import { FeMessagesService } from "./fe-messages.service";
 export class MessagesComponent implements OnInit {
   errors$ =  this.feMessagesService.errors$
   @Input() closeable= true
-  @Input() title = 'Some errors occurred: ';
+  @Input() title = null;
 
   constructor(private feMessagesService: FeMessagesService) {
   }
