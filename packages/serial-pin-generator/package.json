@@ -1,4 +1,5 @@
 {
-  "name": "@festudio/core",
-  "version": "0.0.1"
+  "name": "@festudio/serial-pin-generator",
+  "version": "1.0.3",
+  "private": false
 }
