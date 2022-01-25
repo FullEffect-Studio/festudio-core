@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "packages/messages",
+  "sourceRoot": "packages/messages/src",
+  "prefix": "fecore",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/packages/messages"],
+      "options": {
+        "project": "packages/messages/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "packages/messages/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "packages/messages/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/messages"],
+      "options": {
+        "jestConfig": "packages/messages/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/messages/src/**/*.ts",
+          "packages/messages/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

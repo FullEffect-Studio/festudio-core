@@ -1,6 +1,6 @@
 {
   "name": "@festudio/serial-pin-generator",
-  "version": "1.0.8",
+  "version": "1.0.14",
   "description": "This library helps you generate unique pairs of serial and pin numbers everytime",
   "keywords": [
     "serial",

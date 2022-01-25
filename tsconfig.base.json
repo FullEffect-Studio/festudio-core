@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@festudio/core": ["packages/serial-pin-generator/src/index.ts"]
+      "@festudio/core": ["packages/serial-pin-generator/src/index.ts"],
+      "@festudio/messages": ["packages/messages/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

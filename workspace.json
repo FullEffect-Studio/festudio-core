@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "messages": "packages/messages",
     "serial-pin-generator": "packages/serial-pin-generator"
   }
 }

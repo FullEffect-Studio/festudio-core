@@ -1,0 +1,11 @@
+<div class='mb-4'>
+  <div *ngIf="errors$|async as errors">
+    <nz-alert *ngIf="errors" [nzCloseable]="closeable" (nzOnClose)="close()"
+              nzType="error" [nzShowIcon]="true" [nzMessage]="title"
+              [nzDescription]="description">
+      <ng-template #description>
+        <div *ngFor="let message of errors" class="text-lg">{{message}}</div>
+      </ng-template>
+    </nz-alert>
+  </div>
+</div>

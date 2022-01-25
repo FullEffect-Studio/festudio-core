@@ -1,0 +1,26 @@
+{
+  "name": "@festudio/ngx-messages",
+  "description": "Easily show feedback messages and clear them in a service oriented manner",
+  "version": "1.0.3",
+  "keywords": [
+    "ngx",
+    "messages",
+    "alert",
+    "notification",
+    "angular",
+    "festudio",
+    "danqulogy",
+    "fulleffect"
+  ],
+  "author": "Danquah Bernard White (https://github.com/danqulogy)",
+  "license": "MIT",
+  "private": false,
+  "peerDependencies": {
+    "@angular/common": "^13.1.0",
+    "@angular/core": "^13.1.0",
+    "ng-zorro-antd": "^13.0.1"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}
